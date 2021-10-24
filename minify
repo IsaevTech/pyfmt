@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ $# -eq 0 ]; then
+    # shellcheck disable=SC2156
+    find . -name '*.py' -exec sh -c "pyminify --remove-literal-statements --rename-globals {} | tee -a {}.min; mv {}.min {}" \;
+else
+    for f in "$@"; do
+        pyminify --remove-literal-statements --rename-globals "$f" | tee -a "$f".min
+        mv "$f".min "$f"
+    done
+fi
