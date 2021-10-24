@@ -96,11 +96,11 @@ else:
 ```bash
 B=print
 def A(n):
-	if n<=1:return n
-	else:return A(n-1)+A(n-2)
+    if n<=1:return n
+    else:return A(n-1)+A(n-2)
 C=10
 if C<=0:B('Plese enter a positive integer')
 else:
-	B('Fibonacci sequence:')
-	for D in range(C):B(A(D))
+    B('Fibonacci sequence:')
+    for D in range(C):B(A(D))
 ```
