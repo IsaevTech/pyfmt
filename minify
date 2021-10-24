@@ -4,7 +4,10 @@ if [ $# -eq 0 ]; then
     find . -name '*.py' -exec sh -c "pyminify --remove-literal-statements --rename-globals {} | tee -a {}.min; mv {}.min {}" \;
 else
     for f in "$@"; do
+        U=$(stat -c '%u' "$f")
+        G=$(stat -c '%u' "$f")
         pyminify --remove-literal-statements --rename-globals "$f" | tee -a "$f".min
         mv "$f".min "$f"
+        chown "$U":"$G" "$f"
     done
 fi
