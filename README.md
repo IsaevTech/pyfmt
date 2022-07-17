@@ -1,6 +1,7 @@
 # Python Linter and formatter
 
-[![Build Status](https://ci.isaev.tech/api/badges/IsaevTech/pyfmt/status.svg)](https://ci.isaev.tech/IsaevTech/pyfmt)
+[![Docker Image CI](https://github.com/IsaevTech/pyfmt/actions/workflows/docker-image.yml/badge.svg)](https://github.com/IsaevTech/pyfmt/actions/workflows/docker-image.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/ismv/pyfmt)
 
 ## Usage
 
